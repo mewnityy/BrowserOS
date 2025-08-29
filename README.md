@@ -2,7 +2,7 @@
 
 <div align="center">
   
-![BrowserOS Logo](screnbowseros.png)
+![BrowserOS Logo](Screenshot from 2025-08-29 12-43-01.png)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
