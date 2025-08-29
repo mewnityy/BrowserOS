@@ -1,0 +1,581 @@
+:root {
+    --bg-color: #1e1e2e;
+    --window-color: #313244;
+    --text-color: #cdd6f4;
+    --accent-color: #89b4fa;
+    --taskbar-color: #11111b;
+    --app-color: #313244;
+    --title-color: #cba6f7;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+.desktop {
+    width: 100%;
+    height: calc(100% - 40px);
+    position: relative;
+    overflow: hidden;
+}
+
+.taskbar {
+    height: 40px;
+    background-color: var(--taskbar-color);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.start-menu {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.start-menu:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.start-menu-content {
+    display: none;
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 250px;
+    background-color: var(--window-color);
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 101;
+}
+
+.start-menu-content.active {
+    display: block;
+}
+
+.menu-item {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-item i {
+    margin-right: 10px;
+    font-size: 18px;
+    width: 24px;
+    text-align: center;
+}
+
+.desktop-icon {
+    width: 80px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 15px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.icon-image {
+    width: 48px;
+    height: 48px;
+    background-color: var(--accent-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.icon-text {
+    text-align: center;
+    font-size: 12px;
+    max-width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.window {
+    position: absolute;
+    background-color: var(--window-color);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    min-height: 200px;
+    overflow: hidden;
+    z-index: 10;
+    resize: both;
+}
+
+.window-title {
+    height: 30px;
+    background-color: var(--taskbar-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    cursor: move;
+}
+
+.window-title h3 {
+    margin: 0;
+    font-size: 14px;
+    color: var(--title-color);
+}
+
+.window-controls {
+    display: flex;
+}
+
+.control-btn {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.minimize {
+    background-color: #f1fa8c;
+}
+
+.maximize {
+    background-color: #50fa7b;
+}
+
+.close {
+    background-color: #ff5555;
+}
+
+.window-content {
+    flex-grow: 1;
+    padding: 10px;
+    overflow: auto;
+}
+
+.app-taskbar {
+    display: flex;
+    height: 100%;
+}
+
+.running-app {
+    height: 100%;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.running-app:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.running-app.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-top: 2px solid var(--accent-color);
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+
+.calculator-display {
+    grid-column: span 4;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    text-align: right;
+    font-family: monospace;
+    font-size: 24px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.calculator button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--app-color);
+    color: var(--text-color);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.calculator button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.calculator button.operator {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+.calculator button.equals {
+    grid-column: span 2;
+}
+
+.notepad textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--text-color);
+    border: none;
+    padding: 10px;
+    font-family: monospace;
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.terminal {
+    background-color: rgba(0, 0, 0, 0.8);
+    font-family: monospace;
+    padding: 10px;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-output {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.terminal-input {
+    display: flex;
+    align-items: center;
+}
+
+.terminal-input span {
+    margin-right: 5px;
+    color: #50fa7b;
+}
+
+.terminal-input input {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-family: monospace;
+    outline: none;
+}
+
+.settings {
+    padding: 10px;
+}
+
+.settings h4 {
+    margin-top: 0;
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 5px;
+}
+
+.settings-section {
+    margin-bottom: 20px;
+}
+
+.theme-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.theme-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.2s;
+}
+
+.theme-option:hover {
+    transform: scale(1.1);
+}
+
+.theme-option.active {
+    border-color: white;
+}
+
+.settings-option {
+    margin-bottom: 10px;
+}
+
+.settings-option label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.wallpaper-preview {
+    height: 80px;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.wallpaper-preview:hover {
+    transform: scale(1.02);
+}
+
+.context-menu {
+    position: absolute;
+    width: 150px;
+    background-color: var(--window-color);
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    padding: 5px 0;
+    z-index: 1000;
+    display: none;
+}
+
+.context-menu-item {
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.context-menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.system-time {
+    margin-left: auto;
+    padding-right: 15px;
+    font-size: 14px;
+}
+
+@keyframes startup {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.desktop {
+    animation: startup 1s ease-in-out;
+}
+
+/* 1.2 */
+.file-manager {
+    display: flex;
+    height: 100%;
+}
+
+.file-sidebar {
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-item {
+    padding: 12px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-item.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 3px solid var(--accent-color);
+}
+
+.sidebar-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-item i {
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+.file-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.file-toolbar {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.file-path-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.file-path {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.file-path i {
+    margin-right: 5px;
+    color: var(--accent-color);
+}
+
+.file-actions {
+    display: flex;
+}
+
+.file-action-btn {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.file-action-btn i {
+    margin-right: 5px;
+}
+
+.file-action-btn:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.files-container {
+    padding: 15px;
+    overflow-y: auto;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+}
+
+.file-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.file-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.file-item.selected {
+    background-color: rgba(var(--accent-color-rgb), 0.3);
+}
+
+.file-icon {
+    font-size: 32px;
+    margin-bottom: 5px;
+    color: var(--accent-color);
+}
+
+.file-icon.folder {
+    color: var(--accent-color);
+}
+
+.file-icon.image {
+    color: #50fa7b;
+}
+
+.file-icon.document {
+    color: #f1fa8c;
+}
+
+.file-icon.code {
+    color: #ff79c6;
+}
+
+.file-icon.archive {
+    color: #bd93f9;
+}
+
+.file-name {
+    text-align: center;
+    font-size: 12px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.file-context-menu {
+    position: absolute;
+    background-color: var(--window-color);
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    padding: 5px 0;
+    z-index: 1000;
+    min-width: 150px;
+}
+
+.file-context-menu-item {
+    padding: 8px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.file-context-menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.file-context-menu-item i {
+    margin-right: 8px;
+    width: 16px;
+    text-align: center;
+}

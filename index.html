@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser OS</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="desktop" id="desktop">
+        <!-- иконочки -->
+    </div>
+
+    <div class="context-menu" id="contextMenu">
+        <div class="context-menu-item" id="newFolder">New Folder</div>
+        <div class="context-menu-item" id="refresh">Refresh</div>
+        <div class="context-menu-item" id="settings">Settings</div>
+    </div>
+
+    <div class="taskbar">
+        <div class="start-menu" id="startMenu">
+            <i class="fas fa-th"></i>
+        </div>
+        <div class="start-menu-content" id="startMenuContent">
+            <div class="menu-item" data-app="calculator">
+                <i class="fas fa-calculator"></i> Calculator
+            </div>
+            <div class="menu-item" data-app="notepad">
+                <i class="fas fa-edit"></i> Notepad
+            </div>
+            <div class="menu-item" data-app="terminal">
+                <i class="fas fa-terminal"></i> Terminal
+            </div>
+            <div class="menu-item" data-app="settings">
+                <i class="fas fa-cog"></i> Settings
+            </div>
+            <div class="menu-item" data-app="files">
+                <i class="fas fa-folder"></i> Files
+            </div>
+        </div>
+        <div class="app-taskbar" id="appTaskbar">
+            <!-- запущенные проги -->
+        </div>
+        <div class="system-time" id="systemTime">00:00</div>
+    </div>
+    <audio id="startupSound" src="Windows Startup Sound.mp3" preload="auto"></audio>
+    <audio id="notificationSound" src="Windows 10 notify system generic.mp3" preload="auto"></audio>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script>
+        window.addEventListener("click", () => {
+            const startupSound = document.getElementById("startupSound");
+            const notificationSound = document.getElementById("notificationSound");
+
+            startupSound.play()
+                .then(() => {
+                    console.log("Start sound working");
+                })
+                .catch(err => {
+                    console.warn("nope:", err);
+                });
+
+            // notificationSound.play();
+
+        }, { once: true }); 
+    </script>
+
+</body>
+
+</html>
