@@ -579,3 +579,24 @@ body {
     width: 16px;
     text-align: center;
 }
+
+.selection-box {
+    position: absolute;
+    border: 1px dashed var(--accent-color);
+    background-color: rgba(137, 180, 250, 0.2);
+    pointer-events: none;
+    z-index: 999;
+}
+
+.desktop-icon.selected {
+    background-color: rgba(137, 180, 250, 0.3);
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+}
+
+.desktop-icon.selected .icon-text {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 2px 4px;
+    border-radius: 2px;
+}
