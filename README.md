@@ -67,7 +67,7 @@ JavaScript – logic and interactive functions
 
 ✨ Author
 
-Volodymyr Shevchenko
+mewnityy
 
 
 BrowserOS v1.0
@@ -119,7 +119,7 @@ JavaScript — логика работы и интерактивные функ�
 
 ✨ Автор 
 
-Volodymyr Shevchenko 
+mewnityy
 
 
 💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎
