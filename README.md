@@ -1,4 +1,4 @@
-# BrowserOS v1.2
+# BrowserOS (v1.2)
 
 <div align="center">
   
