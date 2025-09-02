@@ -1,115 +1,69 @@
-# BrowserOS (v1.2)
+# BrowserOS v1.2
 
 <div align="center">
-  
-![BrowserOS Logo](browseros.png)
-![License](https://img.shields.io/badge/license-MIT-green)
-
+  <img src="browseros.png" alt="BrowserOS Logo" width="1000"/>
+  <br>
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
+  </a>
 </div>
 
-#BrowserOS v1.2
+## 🚀 Overview
 
-✨ Description
+**BrowserOS** is an experimental browser-based operating system built entirely with **HTML**, **CSS**, and **JavaScript**. It runs directly in your web browser, simulating an operating system environment with a minimalist desktop UI and essential applications.
 
-BrowserOS v1.2 is the second version of an experimental browser-based operating system built with HTML, CSS, and JavaScript. This OS runs directly in the browser and provides a convenient minimalist interface with essential functions. It is just a simulation and does not replace a real operating system.
+> ⚠️ **Note:** This project is a simulation and is not a replacement for a real operating system.
 
-🔧 Features
+---
 
-📁 Desktop with customizable wallpapers (black, animated, gradient)
+## ✨ Features
 
-🔄 Bottom taskbar with access to essential applications
+- 🖥️ **Desktop Environment**
+  - Customizable wallpapers: black, animated, gradient
+  - Window management: drag, resize, minimize
 
-🎨 Customization (change icon colors, light/dark theme)
+- 🔧 **Applications**
+  - **Notepad** – for taking quick notes
+  - **Terminal** – simple command-line simulation
+  - **Calculator** – basic arithmetic operations
 
-🔢 Window manager (create folders, drag, and resize windows)
+- 🎨 **Customization Options**
+  - Light/Dark mode toggle
+  - Icon color customization
 
-⚙️ Settings for personalizing the interface
+- 📂 **Window Manager**
+  - Create folders
+  - Multi-window support with draggable and resizable windows
 
-📝 Notepad for quick notes
+- ⚙️ **Settings Panel**
+  - Personalize UI themes and behavior
 
-🤖 Terminal for running commands
+- 🔄 **Taskbar**
+  - Access open applications
+  - Start menu simulation
 
-📊 Calculator with basic math operations
+## 🛠️ Technologies Used
 
+- **HTML** – Structure and layout
+- **CSS** – Styling and themes
+- **JavaScript** – Application logic and interactivity
 
-Youtube video about the BrowserOs v1.0
-https://youtu.be/gCIwcJKanVg?si=OKkQ8vy7rvKRz4U7
+---
 
-Enjoy using BrowserOS! 🚀
+## 🧩 Planned Features (Upcoming Updates)
 
-🛠️ Future Updates
+- Improved user interface and animations
+- Advanced window settings and snapping
+- Performance and memory optimizations
+- Additional built-in apps
 
+---
 
-UI improvements
+## 📁 Installation & Usage
 
-Advanced window settings
+No installation required. Just open the project in your browser:
 
-
-Performance optimizations
-
-This is just version 1.2, and many exciting updates are coming soon! Stay tuned for new releases.
-
-⚙️ Technologies
-
-HTML – system structure
-
-CSS – styling and design
-
-JavaScript – logic and interactive functions
-
-✨ Author
-
-mewnityy
-
-
-BrowserOS v1.0
-
-✨ Описание
-
-BrowserOS v1.0 — это первая версия экспериментальной браузерной операционной системы, созданной с использованием HTML, CSS и JavaScript. Эта ОС запускается прямо в браузере и предоставляет удобный минималистичный интерфейс с базовыми функциями. Это всего лишь симуляция и не заменяет настоящую операционную систему.
-
-🔧 Функции
-
-📁 Рабочий стол с возможностью менять обои (чёрные, анимированные, переливающиеся)
-
-🔄 Нижняя панель задач с доступом к основным приложениям
-
-🎨 Кастомизация (изменение цвета иконок, светлая/тёмная тема)
-
-🔢 Оконный менеджер (создание папок, перетаскивание и изменение размера окон)
-
-⚙️ Настройки для персонализации интерфейса
-
-📝 Блокнот для быстрого создания заметок
-
-🤖 Терминал для выполнения команд
-
-📊 Калькулятор с базовыми математическими операциями
-
-Нажмите F11 для полноекранного сайта!
-
-Youtube видео про BrowserOs v1.0
-https://youtu.be/gCIwcJKanVg?si=OKkQ8vy7rvKRz4U7
-
-Наслаждайтесь работой с BrowserOS! 🚀
-
-🛠️ Будущие обновления
-
-Улучшение интерфейса
-
-Оптимизация работы
-
-Это только первая версия (v1.0), и впереди нас ждёт много крутых обновлений! Следите за новыми релизами.
-
-⚙️ Технологии
-
-HTML — структура системы
-
-CSS — оформление и стилизация
-
-JavaScript — логика работы и интерактивные функции
-
-✨ Автор 
-
-mewnityy
-
+```bash
+git clone https://github.com/mewnityy/BrowserOS.git
+cd BrowserOS
+open index.html
