@@ -1,7 +1,7 @@
 # BrowserOS v1.2
 
 <div align="center">
-  <img src="browseros.png" alt="BrowserOS Logo" width="200"/>
+  <img src="browseros.png" alt="BrowserOS Logo" width="1000"/>
   <br>
   <a href="https://opensource.org/licenses/MIT">
     <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
