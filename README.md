@@ -42,15 +42,6 @@
   - Access open applications
   - Start menu simulation
 
----
-
-## 📺 Demo
-
-Watch the demo video on YouTube:  
-[![BrowserOS v1.0 Demo](https://img.shields.io/badge/YouTube-Watch%20Demo-red?logo=youtube)](https://youtu.be/gCIwcJKanVg?si=OKkQ8vy7rvKRz4U7)
-
----
-
 ## 🛠️ Technologies Used
 
 - **HTML** – Structure and layout
